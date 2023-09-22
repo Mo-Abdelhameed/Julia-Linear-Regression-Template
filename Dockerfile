@@ -1,4 +1,4 @@
-FROM julia:1.6.2
+FROM julia:1.9.3
 
 # Copy your source files and entrypoint script
 COPY src ./opt/src
