@@ -7,6 +7,7 @@ COPY ./Project.toml /opt
 COPY ./Manifest.toml /opt
 ENV JULIA_PROJECT=/opt/
 ENV JULIA_DEPOT_PATH /opt/env
+ENV TMPDIR=/opt/tmp
 
 # Change ownership for the working directory
 RUN chown -R 1000:1000 /opt
@@ -35,4 +36,5 @@ WORKDIR /opt/src
 USER 1000
 
 # Set the entrypoint
-ENTRYPOINT ["/opt/entry_point.sh"]
+# ENTRYPOINT ["/opt/entry_point.sh"]
+ENTRYPOINT ["/bin/bash"]
