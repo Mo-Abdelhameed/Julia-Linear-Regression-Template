@@ -11,7 +11,7 @@ ENV JULIA_PROJECT=/opt/
 ENV JULIA_DEPOT_PATH /opt/env
 ENV TMPDIR /opt
 ENV TMP /opt
-ENV TEMP/opt
+ENV TEMP /opt
 # Change ownership for the working directory
 RUN chown -R 1000:1000 /opt
 
