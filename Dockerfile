@@ -9,7 +9,7 @@ COPY ./Manifest.toml /opt
 # Set environment variables
 ENV JULIA_PROJECT=/opt/
 ENV JULIA_DEPOT_PATH /opt/env
-ENV TMPDIR /opt
+ENV TMPDIR /opt/src
 ENV TMP /opt
 ENV TEMP /opt
 # Change ownership for the working directory
@@ -40,4 +40,3 @@ USER 1000
 
 # Set the entrypoint
 ENTRYPOINT ["/opt/entry_point.sh"]
-# ENTRYPOINT ["/bin/bash"]
