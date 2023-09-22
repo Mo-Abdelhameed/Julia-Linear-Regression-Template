@@ -1,4 +1,5 @@
 .ipynb*
-*.jl
+train.jl
+predict.jl
 .DS_Store
 test.ipynb
