@@ -34,8 +34,5 @@ WORKDIR /opt/src
 # Switch to a non-root user
 USER 1000
 
-# Expose the Jupyter port
-EXPOSE 8888
-
 # Set the entrypoint
 ENTRYPOINT ["/opt/entry_point.sh"]
