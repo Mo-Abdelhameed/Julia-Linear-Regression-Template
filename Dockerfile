@@ -8,7 +8,8 @@ COPY ./Manifest.toml /opt
 ENV JULIA_PROJECT=/opt/
 ENV JULIA_DEPOT_PATH /opt/env
 
-RUN chown -R 1000:1000 /opt
+# Change ownership for the working directory
+RUN chmod -R 777 /opt
 
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="336ed68f-0bac-5ca0-87d4-7b16caf5d00b"))'  # CSV
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="324d7699-5711-5eae-9e2f-1d82baa6b597"))'  # CategoricalArrays
@@ -23,27 +24,18 @@ RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="2e2323e0-db8b-457b-ae0d-bdfb3
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"))'  # StatsBase
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="3eaba693-59b7-5ba5-a881-562e759f1c8d"))'  # StatsModels
 
-
-
-
 # Make the entrypoint script executable
 RUN chmod +x /opt/entry_point.sh
 
 # Set the working directory
 WORKDIR /opt/src
 
-# Change ownership for the working directory
 
 # Switch to a non-root user
 USER 1000
 
-# RUN julia --project=/opt -e 'using Pkg; Pkg.activate("/opt")'
-
-
 # Expose the Jupyter port
 EXPOSE 8888
 
-
 # Set the entrypoint
-# ENTRYPOINT ["/bin/bash"]
 ENTRYPOINT ["/opt/entry_point.sh"]
