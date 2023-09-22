@@ -1,0 +1,4 @@
+.ipynb*
+*.jl
+.DS_Store
+test.ipynb
