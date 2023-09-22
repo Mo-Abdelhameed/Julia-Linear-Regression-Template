@@ -5,9 +5,11 @@ COPY src ./opt/src
 COPY ./entry_point.sh /opt/
 COPY ./Project.toml /opt
 COPY ./Manifest.toml /opt
+
+# Set environment variables
 ENV JULIA_PROJECT=/opt/
 ENV JULIA_DEPOT_PATH /opt/env
-ENV TMPDIR=/opt/tmp
+ENV TMPDIR /opt/tmp
 
 # Change ownership for the working directory
 RUN chown -R 1000:1000 /opt
