@@ -9,7 +9,6 @@ COPY ./Manifest.toml /opt
 # Set environment variables
 ENV JULIA_PROJECT=/opt/
 ENV JULIA_DEPOT_PATH /opt/env
-ENV TMPDIR /opt/model_inputs_outputs
 
 # Change ownership for the working directory
 RUN chown -R 1000:1000 /opt/src
@@ -38,6 +37,7 @@ WORKDIR /opt/src
 
 # Switch to a non-root user
 USER 1000
+ENV TMPDIR /opt/model_inputs_outputs
 
 # Set the entrypoint
 ENTRYPOINT ["/opt/entry_point.sh"]
