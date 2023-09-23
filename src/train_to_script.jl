@@ -1,3 +1,4 @@
+import DataFrames
 import LazyJSON
 
 function notebook_to_script(ipynb_filename::String, jl_filename::String)
