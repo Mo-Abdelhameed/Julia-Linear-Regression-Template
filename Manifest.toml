@@ -2,7 +2,7 @@
 
 julia_version = "1.9.3"
 manifest_format = "2.0"
-project_hash = "ec4ba168992ed0feb5186bd2796fbd2c00cc922c"
+project_hash = "527ac05c00f9de60cc43dbff197295ef0c44f1c4"
 
 [[deps.ArgTools]]
 uuid = "0dad84c5-d112-42e6-8d28-ef12dabb789f"
@@ -303,6 +303,12 @@ git-tree-sha1 = "825289d43c753c7f1bf9bed334c253e9913997f8"
 uuid = "a5e1c1ea-c99a-51d3-a14d-a9a37257b02d"
 version = "1.9.0"
 
+[[deps.LazyJSON]]
+deps = ["JSON", "OrderedCollections", "PropertyDicts"]
+git-tree-sha1 = "ce08411caa70e0c9e780f142f59debd89a971738"
+uuid = "fc18253b-5e1b-504c-a4a2-9ece4944c004"
+version = "0.2.2"
+
 [[deps.LearnBase]]
 git-tree-sha1 = "a0d90569edd490b82fdc4dc078ea54a5a800d30a"
 uuid = "7f8f8fb0-2700-5f03-b4bd-41f8cfc144b6"
@@ -552,6 +558,11 @@ deps = ["Distributed", "Printf"]
 git-tree-sha1 = "00099623ffee15972c16111bcf84c58a0051257c"
 uuid = "92933f4c-e287-5a05-a399-4b506db050ca"
 version = "1.9.0"
+
+[[deps.PropertyDicts]]
+git-tree-sha1 = "8cf3b5cea994cfa9f238e19c3946a39cf051896c"
+uuid = "f8a19df8-e894-5f55-a973-672c1158cbca"
+version = "0.1.2"
 
 [[deps.QuadGK]]
 deps = ["DataStructures", "LinearAlgebra"]
