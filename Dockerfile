@@ -10,7 +10,6 @@ COPY ./Manifest.toml /opt
 ENV JULIA_PROJECT=/opt/
 ENV JULIA_DEPOT_PATH /opt/env
 
-
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="336ed68f-0bac-5ca0-87d4-7b16caf5d00b"))'  # CSV
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="324d7699-5711-5eae-9e2f-1d82baa6b597"))'  # CategoricalArrays
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="a93c6f00-e57d-5684-b7b6-d8193f3e46c0"))'  # DataFrames
@@ -36,8 +35,8 @@ ENV TMPDIR /opt/src
 RUN chown -R 1000:1000 /opt/src
 RUN chmod -R 777 /opt/src
 
-USER 1000
+USER root
 
 # Set the entrypoint
-ENTRYPOINT ["/opt/entry_point.sh"]
-# ENTRYPOINT ["/bin/bash"]
+# ENTRYPOINT ["/opt/entry_point.sh"]
+ENTRYPOINT ["/bin/bash"]
