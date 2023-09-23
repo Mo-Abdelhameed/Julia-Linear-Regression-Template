@@ -10,9 +10,6 @@ COPY ./Manifest.toml /opt
 ENV JULIA_PROJECT=/opt/
 ENV JULIA_DEPOT_PATH /opt/env
 
-# Change ownership for the working directory
-
-
 
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="336ed68f-0bac-5ca0-87d4-7b16caf5d00b"))'  # CSV
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="324d7699-5711-5eae-9e2f-1d82baa6b597"))'  # CategoricalArrays
@@ -35,10 +32,10 @@ WORKDIR /opt/src
 
 
 # Switch to a non-root user
-USER 1000
 ENV TMPDIR /opt/src
 RUN chown -R 1000:1000 /opt/src
 RUN chmod -R 777 /opt/src
+USER 1000
 
 # Set the entrypoint
 ENTRYPOINT ["/opt/entry_point.sh"]
