@@ -14,6 +14,9 @@ The following is the directory structure of the project:
 - **`src/`**: This directory holds the source code for the project. It is further divided into various subdirectories:
   - **`train.ipynb`**: This script is used to train the model. It loads the data, preprocesses it, trains the model, and saves the artifacts in the path `./model_inputs_outputs/model/artifacts/`.
   - **`predict.ipynb`**: This script is used to run batch predictions using the trained model. It loads the artifacts and creates and saves the predictions in a file called `predictions.csv` in the path `./model_inputs_outputs/outputs/predictions/`.
+  - **`train_to_script.jl`**: This script is used to convert the `train.ipynb` script to julia script.
+  - **`predict_to_script.jl`**: This script is used to convert the `predict.ipynb` script to julia script.
+
 - **`.gitignore`**: This file specifies the files and folders that should be ignored by Git.
 - **`Dockerfile`**: This file is used to build the Docker image for the application.
 - **`entry_point.sh`**: This file is used as the entry point for the Docker container. It is used to run the application. When the container is run using one of the commands `train` or `predict`, this script runs the corresponding script in the `src` folder to execute the task.
