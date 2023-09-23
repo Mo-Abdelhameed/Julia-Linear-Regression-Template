@@ -13,7 +13,7 @@ ENV TMPDIR /opt/src
 ENV TMP /opt/src
 ENV TEMP /opt/src
 # Change ownership for the working directory
-RUN chown -R 1000:1000 /opt/scr
+RUN chown -R 1000:1000 /opt/src
 RUN chmod -R 777 /opt/src
 
 
