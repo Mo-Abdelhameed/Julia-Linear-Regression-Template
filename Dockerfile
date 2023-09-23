@@ -37,7 +37,8 @@ WORKDIR /opt/src
 
 # Switch to a non-root user
 USER 1000
-ENV TMPDIR /opt/model_inputs_outputs
+RUN chmod 777 /opt/model_inputs_outputs/model/artifacts
+ENV TMPDIR /opt/model_inputs_outputs/model/artifacts
 
 # Set the entrypoint
 ENTRYPOINT ["/opt/entry_point.sh"]
