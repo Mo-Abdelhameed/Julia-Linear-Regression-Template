@@ -10,10 +10,12 @@ COPY ./Manifest.toml /opt
 ENV JULIA_PROJECT=/opt/
 ENV JULIA_DEPOT_PATH /opt/env
 ENV TMPDIR /opt/src
-ENV TMP /opt
-ENV TEMP /opt
+ENV TMP /opt/src
+ENV TEMP /opt/src
 # Change ownership for the working directory
-RUN chown -R 1000:1000 /opt
+RUN chown -R 1000:1000 /opt/scr
+RUN chmod -R 777 /opt/src
+
 
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="336ed68f-0bac-5ca0-87d4-7b16caf5d00b"))'  # CSV
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="324d7699-5711-5eae-9e2f-1d82baa6b597"))'  # CategoricalArrays

@@ -1,5 +1,3 @@
-println(ENV["TMPDIR"])  # Replace "HOME" with the name of the environment variable you want to print
-
 using JSON
 
 function notebook_to_script(ipynb_filename, jl_filename)
