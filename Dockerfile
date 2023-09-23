@@ -22,6 +22,8 @@ RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="a7f614a8-145f-11e9-1d2a-a57a1
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="2e2323e0-db8b-457b-ae0d-bdfb3bc63afd"))'  # MLJScientificTypes
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"))'  # StatsBase
 RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="3eaba693-59b7-5ba5-a881-562e759f1c8d"))'  # StatsModels
+RUN julia -e 'using Pkg; Pkg.add(PackageSpec(uuid="fd094767-a336-5f1f-9728-57cf17d0bbfb"))'  # Supressor
+
 
 # Make the entrypoint script executable
 RUN chmod +x /opt/entry_point.sh
