@@ -9,9 +9,8 @@ COPY ./Manifest.toml /opt
 # Set environment variables
 ENV JULIA_PROJECT=/opt/
 ENV JULIA_DEPOT_PATH /opt/env
-ENV TMPDIR /opt/src
-ENV TMP /opt/src
-ENV TEMP /opt/src
+ENV TMPDIR /opt/model_inputs_outputs
+
 # Change ownership for the working directory
 RUN chown -R 1000:1000 /opt/src
 RUN chmod -R 777 /opt/src
