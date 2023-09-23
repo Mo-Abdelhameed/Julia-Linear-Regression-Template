@@ -33,9 +33,11 @@ WORKDIR /opt/src
 
 # Switch to a non-root user
 ENV TMPDIR /opt/src
+ENV UID 1000
 RUN chown -R 1000:1000 /opt/src
 RUN chmod -R 777 /opt/src
 USER 1000
 
 # Set the entrypoint
 ENTRYPOINT ["/opt/entry_point.sh"]
+# ENTRYPOINT ["/bin/bash"]
