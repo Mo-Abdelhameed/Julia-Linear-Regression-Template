@@ -39,7 +39,6 @@ RUN chmod -R 777 /opt/src
 
 USER 1000
 
-
 # Set the entrypoint
 ENTRYPOINT ["/opt/entry_point.sh"]
 # ENTRYPOINT ["/bin/bash"]

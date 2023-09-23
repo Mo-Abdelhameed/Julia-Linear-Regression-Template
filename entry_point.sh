@@ -14,7 +14,7 @@ case $command in
 
   train)
   {  
-    julia train_to_script.jl
+    python train_to_script.py
     julia train.jl
   }
     ;;
@@ -23,7 +23,7 @@ case $command in
   predict)
   {
 
-    julia predict_to_script.jl
+    python predict_to_script.py
     julia predict.jl
   }
     ;;
