@@ -1,3 +1,5 @@
+ENV["TMPDIR"] = "/opt/src"
+
 using JSON
 
 function notebook_to_script(ipynb_filename, jl_filename)
