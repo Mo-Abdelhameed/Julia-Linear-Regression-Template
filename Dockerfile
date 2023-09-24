@@ -28,7 +28,7 @@ ENV TMPDIR /opt/src
 RUN chown -R 1000:1000 /opt/src
 RUN chmod -R 777 /opt/src
 
-USER root
+USER 1000
 
 # Set the entrypoint
 ENTRYPOINT ["/opt/entry_point.sh"]
