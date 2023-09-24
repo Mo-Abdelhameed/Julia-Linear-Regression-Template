@@ -12,6 +12,7 @@ The following is the directory structure of the project:
   - **`/outputs/`**: The outputs directory contains sub-directory for prediction results.
 - `requirements.txt` This file contains libraries used to implement the model.
 - **`src/`**: This directory holds the source code for the project. It is further divided into various subdirectories:
+
   - **`train.ipynb`**: This script is used to train the model. It loads the data, preprocesses it, trains the model, and saves the artifacts in the path `./model_inputs_outputs/model/artifacts/`.
   - **`predict.ipynb`**: This script is used to run batch predictions using the trained model. It loads the artifacts and creates and saves the predictions in a file called `predictions.csv` in the path `./model_inputs_outputs/outputs/predictions/`.
   - **`train_to_script.jl`**: This script is used to convert the `train.ipynb` script to julia script.
@@ -38,9 +39,9 @@ In this section we cover the following:
 
 ### To run locally (without Docker)
 
-- Create your virtual environment and install dependencies listed in `requirements.txt`.
-- Run the script `src/train.py` to train the linear regression model. This will save the model artifacts, including the preprocessing pipeline and label encoder, in the path `./model_inputs_outputs/model/artifacts/`.
-- Run the script `src/predict.py` to run batch predictions using the trained model. This script will load the artifacts and create and save the predictions in a file called `predictions.csv` in the path `./model_inputs_outputs/outputs/predictions/`.
+- Create your virtual environment and install dependencies listed in `Project.toml`.
+- Run the script `src/train.ipynb` to train the linear regression model. This will save the model artifacts, including the preprocessing pipeline and label encoder, in the path `./model_inputs_outputs/model/artifacts/`.
+- Run the script `src/predict.ipynb` to run batch predictions using the trained model. This script will load the artifacts and create and save the predictions in a file called `predictions.csv` in the path `./model_inputs_outputs/outputs/predictions/`.
 
 ### To run with Docker
 
