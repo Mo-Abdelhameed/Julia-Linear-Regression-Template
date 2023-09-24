@@ -15,7 +15,6 @@ case $command in
   train)
   {  
     julia train_to_script.jl
-
     julia train.jl
   }
     ;;
