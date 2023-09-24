@@ -1,5 +1,5 @@
-module JuilaRegressionTemplate
+module JuliaRegressionTemplate
 
 greet() = print("Hello World!")
 
-end # module JuilaRegressionTemplate
+end # module JuliaRegressionTemplate
