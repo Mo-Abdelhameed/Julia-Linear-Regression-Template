@@ -10,7 +10,6 @@ The following is the directory structure of the project:
   - **`/inputs/`**: This directory contains all the input files for this project, including the `data` and `schema` files. The `data` is further divided into `testing` and `training` subsets.
   - **`/model/artifacts/`**: This directory is used to store the model artifacts, such as trained models and their parameters.
   - **`/outputs/`**: The outputs directory contains sub-directory for prediction results.
-- `requirements.txt` This file contains libraries used to implement the model.
 - **`src/`**: This directory holds the source code for the project. It is further divided into various subdirectories:
 
   - **`train.ipynb`**: This script is used to train the model. It loads the data, preprocesses it, trains the model, and saves the artifacts in the path `./model_inputs_outputs/model/artifacts/`.
